@@ -1,0 +1,87 @@
+b/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f010;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#score {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f2f4;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; /* Default font family */
+}
+
+.cell.X {
+    color: rgb(8, 8, 20); /* Change color for X */
+    font-family: 'Helvetica', sans-serif; /* Example of a different font for X */
+}
+
+.cell.O {
+    color: rgb(226, 29, 22); /* Change color for O */
+    font-family: 'Times New Roman', serif; /* Example of a different font for O */
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8em;
+    }
+
+    #restart {
+        padding: 8px 16px;
+    }
+}
